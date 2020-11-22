@@ -45,7 +45,7 @@ You also can add a character or delete an existing one.
 
 │   ├── img
 
-│   ├── node_modules   
+│   ├── node_modules
 
 │   ├── public
 
