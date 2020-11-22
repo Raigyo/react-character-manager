@@ -1,0 +1,240 @@
+/*general layout*/
+body{
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.bg-light {
+  background-color: #cccccc!important;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header{
+  padding: 5px;
+}
+
+.logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*navbar*/
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.navbar-brand:hover{
+  animation: bounce 0.5s;
+}
+
+/*character displaying*/
+
+.charName {
+  font-size: 20px;
+  color: #000000;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+.charDescr {
+  padding-top: 20px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.characters {
+    background-color    : gray;
+    padding             : 10px;
+    margin              : 5px 30px;
+    border-radius       : 8px;
+    list-style          : none;
+}
+
+/* Collapsible */
+
+.Collapsible {
+  background-color: white; }
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  background: #1600ac4d;
+  border-top: 0; }
+  .Collapsible__contentInner p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px; }
+    .Collapsible__contentInner p:last-child {
+      margin-bottom: 0; }
+
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  background: #1600ac9c;
+  color: white;
+}
+.Collapsible__trigger:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg);
+}
+
+.Collapsible__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+}
+
+.CustomTriggerCSS {
+  background-color: lightcoral;
+  transition: background-color 200ms ease;
+}
+
+.CustomTriggerCSS--open {
+  background-color: darkslateblue;
+}
+
+.Collapsible__custom-sibling {
+  padding: 5px;
+  font-size: 12px;
+  background-color: #CBB700;
+  color: black;
+}
+
+/*buttons add edit delete*/
+.btn-primary{
+  text-shadow: 4px 3px 0 #7A7A7A, 2px 2px 2px rgba(28,110,164,0);
+  color: #FFFFFF;
+  background: #2340D1;
+}
+
+.btn-primary:hover{
+  text-shadow: 4px 3px 0 #7A7A7A, 2px 2px 2px rgba(28,110,164,0);
+  color: #FFFFFF;
+  background: #2B4FFF;
+}
+
+.btn-success{
+  text-shadow: 4px 3px 0 #7A7A7A, 2px 2px 2px rgba(28,110,164,0);
+  color: #FFFFFF;
+  background: #21B709;
+}
+
+.btn-success:hover{
+  text-shadow: 4px 3px 0 #7A7A7A, 2px 2px 2px rgba(28,110,164,0);
+  color: #FFFFFF;
+  background: #26D10A;
+}
+
+.btn-danger{
+  text-shadow: 4px 3px 0 #7A7A7A, 2px 2px 2px rgba(28,110,164,0);
+  color: #FFFFFF;
+  background: #C83535;
+}
+
+.btn-danger:hover{
+  text-shadow: 4px 3px 0 #7A7A7A, 2px 2px 2px rgba(28,110,164,0);
+  color: #FFFFFF;
+  background: #DB3A3A;
+}
+
+/* Grid display */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px auto 20%;
+  grid-template-rows: 1fr 0.2fr;
+  grid-template-areas: "picture content buttons" "showmore showmore showmore";
+}
+
+.picture { grid-area: picture; }
+
+.content { grid-area: content; padding-left: 25px}
+
+/*.showmore { grid-area: showmore; padding-top: 25px;}*/
+
+.buttons { grid-area: buttons; margin-left: auto}
+
+.btn btn-primary {
+  align: right;
+}
+
+/* Grid edit + add*/
+
+.grid-container-img-add {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "file preview";
+}
+
+/* preview image */
+
+.file { grid-area: file; }
+
+.preview { grid-area: preview; padding-right:250px}
+
+.output {
+  max-width: 200px;
+}
