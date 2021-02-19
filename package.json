@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://raigyo.github.io/react-character-manager/",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "react": "^16.8.4",
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.8.4",
